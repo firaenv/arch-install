@@ -4,13 +4,13 @@
 # Install packages after installing base Arck with no GUI
 
 # Install AUR Helper
-# sudo pacman -Sy git -y
-# git clone https://aur.archlinux.org/yay-git.git
-# cd yay-git
-# makepkg -si
+sudo pacman -Sy git -y
+git clone https://aur.archlinux.org/yay-git.git
+cd yay-git
+makepkg -si
 
 # Cd to arch dir
-# cd ..
+cd ~/arch-install
 
 # xorg display server installation
 yay -S xorg
@@ -26,7 +26,7 @@ yay -S intel-ucode
 yay -S networkmanager
 
 # Installation for Appearance management
-yay -S lxapperance
+yay -S lxappearance
 
 # File Manager
 yay -S pcmanfm xfce4-settings ranger
@@ -53,7 +53,7 @@ yay -S exa
 
 # Printing and bluetooth
 yay -S cups
-yay -S bluz blueman
+yay -S bluez blueman
 
 sudo systemctl enable bluetooth
 sudo systemctl enable cups

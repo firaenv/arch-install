@@ -46,19 +46,19 @@ ctrl + alt + s
 #Audio Keybindings
 
 XF86AudioRaiseVolume
-        amixer -c 1 -- sset Master 2db+
+        pactl set-sink-volume @DEFAULT_SINK@ +5%
 
 XF86AudioLowerVolume
-        amixer -c 1 -- sset Master 2db-
+        pactl set-sink-volume @DEFAULT_SINK@ -5%
 
 XF86AudioMute
-        amixer -c 1 -- sset Master toggle
+        pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 alt + d
-        amixer -c 1 -- sset Master 2db+
+        pactl set-sink-volume @DEFAULT_SINK@ +5%
 
 alt + a
-        amixer -c 1 -- sset Master 2db-
+        pactl set-sink-volume @DEFAULT_SINK@ -5%
 
 XF86AudioPlay
     playerctl play-pause
